@@ -10,9 +10,11 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
         // Wywołanie
-        createPerson();
-        createPerson();
-        createPerson();
+        createPerson("Marek");
+        createPerson("Marek");
+        createPerson("Marek");
+
+
 
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
         for (int i = 1; i <= 5; i++) {
@@ -24,18 +26,21 @@ public class Main {
     }
 
     // Wzorzec projektowy Factory (Fabryka)
-    public static Person createPerson(){
+    public static Person createPerson(String name){
         if(INSTANCE == null){
-            INSTANCE = new Person();
+            INSTANCE = new Person(name);
         }
         return INSTANCE;
     }
 
     // Metoda
     public static class Person{
-        // Constructor
-        Person(){
-            System.out.println("Person");
+        // Parameterless constructor
+//        Person(){
+//            System.out.println("Person");
+        // Constructor z parameter
+        Person(String name){
+            System.out.println("Person: " + name);
         }
     }
 }
