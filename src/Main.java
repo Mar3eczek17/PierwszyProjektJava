@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        System.out
+        System.out.println("Hello and welcome!");
         // Wywołanie
         createPerson();
         createPerson();
@@ -31,12 +31,11 @@ public class Main {
         return INSTANCE;
     }
 
+    // Metoda
     public static class Person{
         // Constructor
         Person(){
             System.out.println("Person");
         }
     }
-
-
 }
